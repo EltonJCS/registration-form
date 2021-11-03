@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-light: #76c8ff;
+  --bg-dark: #66008f;
+  --bg-container: rgb(235, 235, 255);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(var(--bg-light), var(--bg-dark));
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--bg-container);
+  box-shadow: 0px 0px 10px 5px var(--bg-dark);
+}
+.container h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: var(--bg-dark);
+}
+.container hr {
+  margin-bottom: 30px;
+  color: var(--bg-dark);
+}
+
+form {
+  height: 100%;
+}
+
+#input-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+#input-boxes label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.input-box {
+  width: calc(100% / 2 - 20px);
+}
+.input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid var(--bg-light);
+  padding-left: 10px;
+  font-size: 14px;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border: 2px solid var(--bg-dark);
+}
+
+#form-submit {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  margin: 50px 0 0;
+}
+#form-submit input {
+  height: 100%;
+  width: 25%;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--bg-container);
+  border: 1px solid var(--bg-dark);
+  background: var(--bg-dark);
+}
+#form-submit input:hover {
+  cursor: pointer;
+  opacity: 100%;
+  box-shadow: 0px 0px 20px var(--bg-light) inset;
+}
+#form-submit input:active {
+  box-shadow: 0px 0px 50px var(--bg-container) inset;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+  }
+  .input-box {
+    width: 100%;
+  }
+  #input-boxes {
+    max-height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  #input-boxes::-webkit-scrollbar {
+    width: 0;
+  }
+}
