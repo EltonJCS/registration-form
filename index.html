@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -59,8 +59,13 @@
               name="password"
               id="password"
               placeholder="Insira sua senha"
+              oninput="strengthCheck()"
               required
             />
+            <div class="password-strength">
+              <div id="strengthBar"></div>
+              <p id="strengthText"></p>
+            </div>
           </div>
           <div class="input-box">
             <label for="rePassword">Confirme sua senha:</label>
@@ -79,5 +84,7 @@
         </div>
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
