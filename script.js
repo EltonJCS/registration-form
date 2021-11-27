@@ -67,3 +67,17 @@ function strengthChange(strength) {
       break;
   }
 }
+
+const navMenuSlide = () => {
+  const menu = document.querySelector(".menu-icon");
+  const nav = document.querySelector(".nav-links");
+
+  //Toggle Menu
+  menu.addEventListener("click", () => {
+    nav.classList.toggle("menu-tab");
+    //Change Menu Icon
+    menu.classList.toggle("toggle");
+  });
+};
+
+navMenuSlide();
